@@ -4,7 +4,12 @@ const { destinations } = require("./db");
 //imports what "express" exports
 const express = require("express");
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+
+//use ||
+// if(process.env.PORT !== undefined){
+//     PORT = process.env.PORT
+// }
 //create an express server (deaf)
 const server = express();
 
